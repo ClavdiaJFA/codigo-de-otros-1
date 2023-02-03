@@ -9,11 +9,11 @@ async function displayUser(username) {
   try {    const response = await fetch(`${usersEndpoint}/${username}`);
   let data = await response.json(); 
   console.log(data);
-  $n.textContent = `${data.name}`; //uso de backthicks
+  $n.textContent = `${data.name}`; //corrección del uso de backthicks
   $b.textContent = `${data.blog}`;
   $l.textContent = `${data.location}`;
     
-  } catch (error) {
+  } catch (error) {  //añadido el catch de try catch
     handleError(error)
   }
   }
